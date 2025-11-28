@@ -38,6 +38,7 @@
     },
     {
       id: "tour",
+      visible: instanceVariables.tours,
       text: "Take a tour",
       icon: faHiking,
       action: function () {
@@ -96,15 +97,17 @@
     <div class="my-5">
       <div class="flex justify-center max-w-full flex-wrap">
         {#each buttons as button}
-          <LightIconButton
-            label={button.text}
-            icon={button.icon}
-            on:click={() => {
-              appState.modals.splash = false;
-              button.action();
-            }}
-            disabled={!appState.layersLoaded}
-          />
+          {#if button.visible != false}
+            <LightIconButton
+              label={button.text}
+              icon={button.icon}
+              on:click={() => {
+                appState.modals.splash = false;
+                button.action();
+              }}
+              disabled={!appState.layersLoaded}
+            />
+          {/if}
         {/each}
       </div>
     </div>

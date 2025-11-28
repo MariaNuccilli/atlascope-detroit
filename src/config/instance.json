@@ -1,10 +1,10 @@
 {
     "baseURL": "https://atlascope.org",
-    "name": "Boston",
-    "tagline": "is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time",
-    "geographicCoverage": "the Boston metropolitan area",
+    "name": "Yourtown",
+    "tagline": "is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time",
+    "geographicCoverage": "the Yourtown area",
     "institutionalShortName": "Leventhal Map & Education Center",
-    "institutionalCredit": "A project of the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
+    "institutionalCredit": "A project of [Yourtown](https://example.org) and the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
     "maxExtent": [
         -72.1536,
         41.5895,
@@ -12,7 +12,7 @@
         42.6132
     ],
     "defaultStartLocation": {
-        "name": "BPL",
+        "name": "Default",
         "center": [
             -71.07733477136398,
             42.34962571323688
@@ -23,28 +23,33 @@
     },
     "coverageDescriptiveList": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/coverage-list.json",
     "historicLayersFootprintsFile": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/boston-volume-extents.topojson",
-    "footprintsDissolved": "https://raw.githubusercontent.com/bplmaps/lmec-digital-library-metadata/refs/heads/main/atlascope/atlascope-boston/boston-volume-extents-dissolved.geojson",
-    "referenceLayers": "https://raw.githubusercontent.com/bplmaps/lmec-digital-library-metadata/refs/heads/main/atlascope/atlascope-boston/reference-layers.json",
+    "footprintsDissolved": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/extents-dissolved.geojson",
+    "referenceLayers": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/reference-layers.json",
     "geocodeKey": "DY88zutnCSJjg1OmMrUF",
     "aboutPage": "https://www.leventhalmap.org/projects/digital-projects/atlascope/",
     "outOfBoundsMessage": {
         "url": "https://www.leventhalmap.org/donate/sponsor-an-atlas/",
-        "text": "Help us extend the coverage in Atlascope by sponsoring an atlas"
+        "text": "Leave a note for users who just scrolled off the map... perhaps inviting them to sponsor an atlas?"
     },
     "splashPageNoteMessage": {
         "url": "https://www.leventhalmap.org/donate/sponsor-an-atlas/",
-        "text": "Help us extend the coverage in Atlascope by sponsoring an atlas"
+        "text": "Leave a note for users who just open the splash page... perhaps inviting them to sponsor an atlas?"
     },
-    "gaMeasurementId": "G-5K9LGW88CS",
-    "gaTMContainerId": "GTM-PZZJVTW",
+    "researchControls": {
+        "annotations": true,
+        "connectors": false
+    },
+    "tours": false,
+    "gaMeasurementId": "GOOGLE_ANALYTICS_MEASUREMENT_ID",
+    "gaTMContainerId": "GOOGLE_TAG_MANAGER_CONTAINER_ID",
     "metaTags": {
-        "title": "Atlascope Boston",
-        "description": "Atlascope Boston is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time. A project of the Leventhal Map & Education Center at the Boston Public Library.",
+        "title": "Atlascope Yourtown",
+        "description": "Atlascope Yourtown is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time. A project of Yourtown and the Leventhal Map & Education Center at the Boston Public Library.",
         "canonical": "https://www.atlascope.org",
         "openGraph": {
             "url": "https://www.atlascope.org",
-            "title": "Atlascope Boston",
-            "description": "Atlascope Boston is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time. A project of the Leventhal Map & Education Center at the Boston Public Library.",
+            "title": "Atlascope Yourtown",
+            "description": "Atlascope Yourtown is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time. A project of Yourtown and the Leventhal Map & Education Center at the Boston Public Library.",
             "images": [
                 {
                     "url": "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:9g54z607b/913,353,4051,2501/,800/0/default.jpg",

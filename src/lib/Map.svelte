@@ -306,6 +306,7 @@
 
     // This is the function that executes the rendering of the spyglass, swipe, or opacity feature for the overlay layer
     // It's bound to the `prerender` event on `overlayLayer`
+    
     olLayers.overlay.on("prerender", function (event) {
       if (mapState.viewMode === "opacity") {
         olLayers.overlay.setOpacity(opacitySliderValue / 100);
@@ -423,8 +424,10 @@
     }
   });
 
+  // annotation effects
+
   $effect(() => {
-    if (mapState.annotationEntry) {
+    if (mapState.annotationEntry && instanceVariables.researchControls.annotations) {
       enableAnnotationMode();
     } else {
       disableAnnotationMode();
@@ -432,7 +435,7 @@
   });
 
   $effect(() => {
-    if (mapState.annotationRead) {
+    if (mapState.annotationRead && instanceVariables.researchControls.annotations) {
       loadAnnotations();
       mapState.annotationRead = false;
     }
@@ -441,6 +444,8 @@
 
 <section
   id="map"
+  role="button"
+  tabindex=0
   onmousemove={manipulateDrag}
   ontouchmove={manipulateDrag}
   onmouseup={() => {
@@ -450,9 +455,11 @@
     draggingFlag = false;
   }}
 >
-  <div id="map-div" />
+  <div id="map-div"></div>
 
   <div
+    role="button"
+    tabindex=0  
     id="drag-handle"
     class="select-none cursor-move rounded-full bg-pink-800 ring-2 ring-white p-2 text-white drop-shadow hover:ring-4 hover:bg-pink-900 transition {mapState.viewMode ===
     'opacity'
@@ -488,7 +495,7 @@
     <div class="text-sm font-semibold">Opacity {opacitySliderValue}%</div>
   </div>
 
-  <div
+  <button
     onclick={() => {
       appState.tour.active = false;
       appState.modals.splash = true;
@@ -496,7 +503,7 @@
     class="absolute top-0 w-24 left-5 bg-white p-2 rounded-b-lg cursor-pointer transition-all drop-shadow hover:pt-3 hover:bg-gray-50 hover:ring-2 hover:ring-red-200"
   >
     <AtlascopeLogo />
-  </div>
+  </button>
 
   {#if appState.modals.geolocation}
     <div
@@ -525,7 +532,7 @@
     </div>
   {/if}
 
-  {#if mapState.annotationSave}
+  {#if mapState.annotationSave && instanceVariables.researchControls.annotations}
     <AnnotationEntryForm
       pos={annotationEntryCoords}
       featureExtent={annotationExtentCoords}

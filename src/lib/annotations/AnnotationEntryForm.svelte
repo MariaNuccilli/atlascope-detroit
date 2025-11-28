@@ -69,7 +69,7 @@
                         name="annotation-input-body"
                         required
                         bind:value={annotationBodyEntry}
-                    />
+                    ></textarea>
                 </div>
                 <div class="py-2 px-3">
                     <input

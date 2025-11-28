@@ -9,21 +9,25 @@
   import {
     parseUrlParams,
     fetchLayerData,
-    fetchReferenceLayerData
+    fetchReferenceLayerData,
   } from "./lib/helpers/initializingFunctions.js";
 
   import Map from "./lib/Map.svelte";
   import ModalWrapper from "./lib/modals/ModalWrapper.svelte";
   import TourController from "./lib/tours/TourController.svelte";
-
   import GoogleAnalytics from "./lib/helpers/GoogleAnalytics.svelte";
 
-  import { mapState, appState, allLayers, referenceLayers } from "./lib/state.svelte.js";
+  import {
+    mapState,
+    appState,
+    allLayers,
+    referenceLayers,
+  } from "./lib/state.svelte.js";
 
   // Initialization functions; parse out the initial url params and fetch the layer data
   onMount(() => {
     const urlParams = parseUrlParams(
-      window.location.hash.substring(2).split("?")[0],
+      window.location.hash.substring(2).split("?")[0]
     );
     mapState.viewMode = urlParams.mode ? urlParams.mode : "glass";
     mapState.center = urlParams.center
@@ -40,8 +44,8 @@
       : instanceVariables.defaultStartLocation.overlayLayerId;
 
     fetchReferenceLayerData().then((d) => {
-      referenceLayers.layers = d
-    })
+      referenceLayers.layers = d;
+    });
 
     fetchLayerData().then((d) => {
       allLayers.layers = d;
@@ -56,6 +60,12 @@
         appState.modals.splash = false;
       }
     });
+
+    fetchReferenceLayerData().then((d) => {
+      referenceLayers.layers = d;
+      appState.referenceLayersLoaded = true;
+    });
+    
   });
 </script>
 
@@ -68,7 +78,7 @@
 <GoogleAnalytics gaPropertyId={instanceVariables.gaMeasurementId} />
 
 <div id="wraps-all">
-  {#if appState.layersLoaded}
+  {#if appState.layersLoaded && appState.referenceLayersLoaded}
     <Map />
   {/if}
 
