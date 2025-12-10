@@ -1,10 +1,10 @@
 {
     "baseURL": "https://atlascope.org",
-    "name": "Yourtown",
-    "tagline": "is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time",
-    "geographicCoverage": "the Yourtown area",
+    "name": "Detroit",
+    "tagline": "is a tool for exploring historic urban atlases in Detroit and telling stories about how places have changed over time",
+    "geographicCoverage": "the Detroit area",
     "institutionalShortName": "Leventhal Map & Education Center",
-    "institutionalCredit": "A project of [Yourtown](https://example.org) and the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
+    "institutionalCredit": "A project of Wayne State University Library System (https://library.wayne.edu) and the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
     "maxExtent": [-83.287,42.255,-82.910,42.450],
     "defaultStartLocation": {
         "name": "Default",
@@ -35,13 +35,13 @@
     "gaMeasurementId": "GOOGLE_ANALYTICS_MEASUREMENT_ID",
     "gaTMContainerId": "GOOGLE_TAG_MANAGER_CONTAINER_ID",
     "metaTags": {
-        "title": "Atlascope Yourtown",
-        "description": "Atlascope Yourtown is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time. A project of Yourtown and the Leventhal Map & Education Center at the Boston Public Library.",
+        "title": "Atlascope Detroit",
+        "description": "Atlascope Detroit is a tool for exploring historic urban atlases in Detroit and telling stories about how places have changed over time. A project of Wayne State University Library System and the Leventhal Map & Education Center at the Boston Public Library.",
         "canonical": "https://www.atlascope.org",
         "openGraph": {
             "url": "https://www.atlascope.org",
-            "title": "Atlascope Yourtown",
-            "description": "Atlascope Yourtown is a tool for exploring historic urban atlases in Yourtown and telling stories about how places have changed over time. A project of Yourtown and the Leventhal Map & Education Center at the Boston Public Library.",
+            "title": "Atlascope Detroit",
+            "description": "Atlascope Detroit is a tool for exploring historic urban atlases in Detroit and telling stories about how places have changed over time. A Wayne State University Library System and the Leventhal Map & Education Center at the Boston Public Library.",
             "images": [
                 {
                     "url": "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:9g54z607b/913,353,4051,2501/,800/0/default.jpg",
@@ -56,8 +56,8 @@
             "handle": "@bplmaps",
             "site": "@bplmaps",
             "cardType": "summary_large_image",
-            "title": "Atlascope Boston",
-            "description": "Atlascope Boston is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time. A project of the Leventhal Map & Education Center at the Boston Public Library.",
+            "title": "Atlascope Detroit",
+            "description": "Atlascope Detroit is a tool for exploring historic urban atlases in metropolitan Boston and telling stories about how places have changed over time. A project of the Leventhal Map & Education Center at the Boston Public Library.",
             "image": "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:9g54z607b/913,353,4051,2501/,800/0/default.jpg",
             "imageAlt": "Excerpt from an 1898 atlas plate showing the Boston Public Library and buildings, streets, and other urban features nearby in Copley Square."
         }
